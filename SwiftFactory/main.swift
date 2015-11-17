@@ -22,15 +22,14 @@ func createPersonWithClassName(
             initializer: "initWithName:",
             argument:    personName!)
         {
-            println("\(className) name = \(person.name)");
+            print("\(className) name = \(person.name)");
         }
     }
     else
     {
-        if let person = PersonFactory.createInstance(
-            className: qualifiedName)
+        if let _ = PersonFactory.createInstance(className: qualifiedName)
         {
-            println("Created a \(className)");
+            print("Created a \(className)");
         }
     }
 }
